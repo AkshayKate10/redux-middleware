@@ -1,4 +1,3 @@
 # redux-middleware
 
 yamaha
-akshay
