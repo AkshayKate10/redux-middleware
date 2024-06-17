@@ -19,7 +19,7 @@ function InputComponent() {
     <>
       <h2>Input Component</h2>
       <div>
-        First Name :&nbsp;
+        First Name new :&nbsp;
         <input id="firstName" onChange={onInputChange} value={firstName} />
       </div>
       <div>
