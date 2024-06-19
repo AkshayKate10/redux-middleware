@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 
 function InputComponent() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+
+  const dispatch = useDispatch();
 
   const onInputChange = (event) => {
     const {
@@ -15,6 +18,12 @@ function InputComponent() {
       setLastName(value);
     }
   };
+
+  const onSubmit = () => {
+    const action = { type: "SET_FIRST_NAME", value: firstName };
+    dispatch(action);
+  };
+
   return (
     <>
       <h2>Input Component</h2>
@@ -27,7 +36,7 @@ function InputComponent() {
         <input id="lastName" onChange={onInputChange} value={lastName} />
       </div>
       <div>
-        <button> Submit</button>
+        <button onClick={onSubmit}> Submit</button>
       </div>
     </>
   );
