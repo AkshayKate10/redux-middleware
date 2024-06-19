@@ -19,11 +19,11 @@ function InputComponent() {
     <>
       <h2>Input Component</h2>
       <div>
-        First Name new :&nbsp;
+        First Name :&nbsp;
         <input id="firstName" onChange={onInputChange} value={firstName} />
       </div>
       <div>
-        Last Name new :&nbsp;
+        Last Name :&nbsp;
         <input id="lastName" onChange={onInputChange} value={lastName} />
       </div>
       <div>
